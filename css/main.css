@@ -2,6 +2,7 @@
 body, html {
 	margin: 0;
 	padding: 0;
+	font-family: 'Raleway', sans-serif!important;
 	background: linear-gradient(to bottom, rgba(255, 255, 255, .2) 0%, rgba(255, 255, 255, 1) 20%, rgba(255, 255, 255, 1) 80%, rgba(255,255,255, 0) 100%), url('../img/rainbow_blocks_background.jpg') bottom no-repeat, url('../img/rainbow_blocks_background.jpg') top center no-repeat!important;
 }
 
@@ -10,36 +11,55 @@ section:not(#navbar), footer {
 }
 
 nav.navbar {
-	background: rgba(0, 148, 50, .9);
+	background: rgba(255, 255, 255, 1);
 }
 
 nav.navbar a {
-	color: white;
+	color: #282D31;
 }
 
 footer {
-	background: rgba(238, 90, 36,1.0);
+	background: #282D31;
 	color: white;
 }
 
 h1:after, h2:after {
 	content: '';
 	display: block;
-	border-bottom: 5px solid rgba(0, 148, 50,1.0);
+	border-bottom: 5px solid #cecece;
 	max-width: 50px;
 }
 
-.card {
-	background: rgba(0, 148, 50,.8)!important;
-	color: white!important;
-}
+/*Card styling*/
 
 .card button {
-	color: white!important;
+	color: #282D31;
+}
+
+.card {
+	transition: .3s ease-out;
+}
+
+.card:hover {
+	transform: scale(1.1);
+}
+
+.accordion .card:hover {
+	transform: none;
+}
+
+a.btn {
+	color: #282D31;
 }
 
 .btn {
-	background: rgba(238, 90, 36,1.0)!important;
+	background: #cecece;
+}
+
+.carousel-inner, .profile-picture, nav.navbar, .card {
+	-webkit-box-shadow: 10px 10px 33px -5px rgba(0,0,0,0.2);
+	-moz-box-shadow: 10px 10px 33px -5px rgba(0,0,0,0.2);
+	box-shadow: 10px 10px 33px -5px rgba(0,0,0,0.2);
 }
 
 /*Some styling to the slider*/
@@ -55,12 +75,55 @@ h1:after, h2:after {
 	position: absolute;
 	bottom: -50px;
 	right: 50px;
-}
-
-.profile-picture img {
 	width: 200px;
-	height: auto;
-	border: 2px solid black;
+	height: 200px;
 	border-radius: 100px;
+	border: 2px solid #282D31;
+	background: url('../img/profile_pic.jpg');
+	background-size: contain;
+	transition: .3s ease-out;
 }
 
+.profile-picture:hover {
+	transform: scale(1.1);
+}
+
+@media screen and (max-width: 1199px){
+	.carousel-item img {
+		max-height: 523px;
+	}
+}
+
+@media screen and (max-width: 991px){
+	.profile-picture {
+		width: 150px;
+		height: 150px;
+	}
+
+	.carousel-item img {
+		max-height: 388px;
+	}
+}
+
+@media screen and (max-width: 767px){
+	.profile-picture {
+		width: 100px;
+		height: 100px;
+	}
+
+	.carousel-item img {
+		max-height: 231px;
+	}
+}
+
+/*Styling icons*/
+i.fab {
+	font-size: 30px;
+	padding: 15px;
+	color: white;
+	transition: .3s ease-out;
+}
+
+i.fab:hover {
+	transform: scale(1.5);
+}
