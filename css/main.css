@@ -3,7 +3,12 @@ body, html {
 	margin: 0;
 	padding: 0;
 	font-family: 'Raleway', sans-serif!important;
-	background: linear-gradient(to bottom, rgba(255, 255, 255, .2) 0%, rgba(255, 255, 255, 1) 20%, rgba(255, 255, 255, 1) 80%, rgba(255,255,255, 0) 100%), url('../img/rainbow_blocks_background.jpg') bottom no-repeat, url('../img/rainbow_blocks_background.jpg') top center no-repeat!important;
+}
+
+main {
+	margin-top: 60px;
+	min-height: 66.2vh;
+	background: linear-gradient(to bottom, rgba(255, 255, 255, .5) 0%, rgba(255, 255, 255, 1) 15%, rgba(255, 255, 255, 1) 85%, rgba(255,255,255, .5) 100%), url('../img/rainbow_blocks_background.jpg') bottom no-repeat, url('../img/rainbow_blocks_background.jpg') top center no-repeat!important;
 }
 
 section:not(#navbar), footer {
@@ -126,4 +131,65 @@ i.fab {
 
 i.fab:hover {
 	transform: scale(1.5);
+}
+
+/*Styling banners*/
+
+section.banner {
+	background: url('../img/laptop.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+section.banner h1 {
+	color: white;
+}
+
+/*Styling form*/
+
+.contact_form {
+	padding: 15px;
+}
+
+.contact_form input, .contact_form textarea {
+	background-color: #f6f6f6;
+	border: 0;
+	padding: 5px;
+	transition: .3s ease-out;
+}
+
+.contact_form input:hover, .contact_form textarea:hover, .contact_form input:focus, .contact_form textarea:focus {
+	transform: scale(1.1);
+	border: 1px solid #cecece;
+}
+
+.contact_form label {
+	display: block;
+	font-weight: bold;
+}
+
+.contact_form td {
+	padding: 5px;
+}
+
+.contact_form textarea {
+	width: 100%;
+	min-height: 200px;
+}
+
+.contact_form input[type="submit"]{
+	border: none;
+	padding: 5px 20px;
+	color: white;
+	background-color: #cecece;
+	transition: .3s ease-out;
+}
+
+.contact_form input[type="submit"]:hover {
+	transform: scale(1.2);
+	cursor: pointer;
+}
+
+.contact_form input[name="subject"]{
+	width: 100%;
 }
