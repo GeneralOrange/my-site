@@ -18,13 +18,14 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 
     <title>Erik van der Schaaf | My Website</title>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
   </head>
   <body>
     <main>
       <section id="navbar">
         <nav class="navbar fixed-top navbar-expand-lg">
           <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="./index.php">
               <img src="./img/general_orange_logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
               Erik van der Schaaf
             </a>

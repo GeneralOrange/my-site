@@ -21,7 +21,7 @@
 					Thanks.
 				</div>
 				<div class="col-sm">
-					<form action="" method="POST">
+					<form action="includes/send_mail.php" onsubmit="check_if_capcha_is_filled()" method="POST">
 						<table class="contact_form">
 							<tr>
 								<td>
@@ -46,7 +46,13 @@
 								</td>
 							</tr>
 							<tr>
+								<td colspan="2">
+									<div class="g-recaptcha" data-callback="capcha_filled" data-expired-callback="capcha_expired" data-sitekey="6LfUCYIUAAAAACiGnFVQ4qsh4NixFmyetTx76tRm"></div>
+								</td>
+							</tr>
+							<tr>
 								<td>
+									<input type="hidden" name="captcha" id="captcha" value="not_filled" required>
 									<input type="submit" name="submit" value="Send">
 								</td>
 							</tr>
